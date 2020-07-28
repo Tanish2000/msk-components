@@ -20,6 +20,18 @@ const Basic = (
   }
 ) => {
   const styles = useStyles()
+  function disp(paragraph) {
+    return (
+      <ol>
+        {achievements.value.map((paragraph, id) => {
+          return <div key={id}>
+            <br />
+            <li style={styles.paragraph} >{paragraph.value}</li>
+          </div>
+        })}
+      </ol>
+    )
+  }
   return (
     <div style={{
       ...styles.root,
@@ -28,16 +40,7 @@ const Basic = (
     }}>
       <h1 style={styles.headlineText}>{headlineText.value}</h1>
       <hr />
-      {<ol>
-        {achievements.value.map((paragraph, id) => {
-          return <div key={id}>
-            <br />
-
-            <li style={styles.paragraph} >{paragraph.value}</li>
-          </div>
-        })}
-      </ol>
-      }
+      {disp()}
     </div >
 
   );
