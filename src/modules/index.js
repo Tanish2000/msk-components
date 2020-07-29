@@ -6,6 +6,6 @@ const mskModules = {
   resume,
   cover,
   jd
-}
+};
 
 export default mskModules;
