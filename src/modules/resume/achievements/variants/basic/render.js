@@ -20,7 +20,7 @@ const Basic = (
   }
 ) => {
   const styles = useStyles()
-  function disp(paragraph) {
+  function list_render() {  //function for achievement-list
     return (
       <ol>
         {achievements.value.map((paragraph, id) => {
@@ -32,6 +32,7 @@ const Basic = (
       </ol>
     )
   }
+  const achievements_list = list_render()
   return (
     <div style={{
       ...styles.root,
@@ -40,8 +41,8 @@ const Basic = (
     }}>
       <h1 style={styles.headlineText}>{headlineText.value}</h1>
       <hr />
-      {disp()}
-    </div >
+      {achievements_list}
+    </div>
 
   );
 };
